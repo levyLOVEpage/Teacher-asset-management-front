@@ -1,0 +1,62 @@
+<view class="container more">
+  <view class="user flex-wrp">
+    <view class="avatar flex-item">
+      <image class="userinfo-avatar" src="/images/touxiang.png" background-size="cover"></image>
+    </view>
+    <view class="user-info flex-item">
+    <block wx:for="{{usermes}}" wx:key="item.student_number">
+      <text class="userinfo-nickname">{{item.name}}</text>
+      <text class="edit">{{item.celphone}}</text>
+    </block>
+    </view>
+  </view>
+
+  <view class="my">
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="/images/myinfo711.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+      <navigator url="../userdata/userdata" class="widget"hover-class="none" >
+        <text>我的主页</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="/images/jie.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+      <navigator url="../borrow/borrow" class="widget"hover-class="none" >
+        <text>我的租借</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="/images/pwd711.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+      <navigator url="../changepwd/changepwd" class="widget"hover-class="none" >
+        <text>修改密码</text>
+      </navigator>
+      </view>
+    </view>
+    <view class="my-item flex-wrp">
+      <view class="myitem-icon flex-item" >
+        <image src="/images/about.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text>关于我们</text>
+      </view>
+    </view>
+  <view class="my-item flex-wrp" bindtap="logout">
+      <view class="myitem-icon flex-item" >
+        <image src="/images/logout711.png"></image>
+      </view>
+      <view class="myitem-name flex-item">
+        <text >注销</text>
+      </view>
+    </view>
+  </view>
+</view>

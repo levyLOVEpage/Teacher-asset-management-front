@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/borrow/borrow",
+    "pages/addlist/addlist",
+    "pages/index/index",
+    "pages/userdata/userdata",
+    "pages/user/user",
+    "pages/changepwd/changepwd",
+    "pages/first/first",
+    "pages/tab/tab",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "温大资产管理",
+    "navigationBarBackgroundColor": "#0099CC",
+    "backgroundColor": "#fbf9fe",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#f10b2e",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homeclick.png"
+      },
+      {
+        "pagePath": "pages/addlist/addlist",
+        "text": "联系人",
+        "iconPath": "images/lianxi0.png",
+        "selectedIconPath": "images/lianxi1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的设备",
+        "iconPath": "images/eh.png",
+        "selectedIconPath": "images/ecli.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/userclick.png"
+      }
+    ]
+  }
+
+}

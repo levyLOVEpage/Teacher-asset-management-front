@@ -1,0 +1,49 @@
+<view >
+  <view class="commen_title">
+    <text>我借入的设备</text>
+  </view>
+  <view class="single_goods" wx:for-items="{{equlist}}">
+    <view class="single_image_wrap">
+      <image src="/images/in.png" class="single_goods_image"></image>
+    </view>
+    <view class="single_goods_infor">
+      <navigator url="../first/first?id={{item.equipnum}}" class="widget" >
+        <view class="single_goods_name">
+          <text>{{item.equipname}}</text>
+        </view>
+        <view class="single_goods_address">
+          <text>{{item.equipnum}}</text>
+        </view>
+        <view class="single_goods_price">
+          <text>{{item.starttime}}->{{item.endtime}}</text>
+        </view>
+      </navigator>
+      <view class="carImgWrap" bindtap="delborrow" data-id="{{item.equipnum}}" >
+            归还
+          </view>
+    </view>
+  </view>
+   <view class="commen_title">
+    <text>我借出的设备</text>
+  </view>
+  <view class="single_goods" wx:for-items="{{equlist2}}">
+    <view class="single_image_wrap">
+      <image src="/images/out.png" class="single_goods_image"></image>
+    </view>
+    <view class="single_goods_infor">
+      <navigator url="../first/first?id={{item.equipnum}}" class="widget" >
+        <view class="single_goods_name">
+          <text>{{item.equipname}}</text>
+        </view>
+        <view class="single_goods_address">
+          <text>{{item.equipnum}}</text>
+        </view>
+        <view class="single_goods_price">
+          <text>{{item.starttime}}->{{item.endtime}}</text>
+          <view class="carImgWrap">
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  </view>

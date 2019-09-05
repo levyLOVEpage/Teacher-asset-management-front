@@ -1,0 +1,11 @@
+      <view class="login-item-section">
+        <text>旧密码：</text><input placeholder="请输入旧密码" class="login-item-input" placeholder-style="color:#666666;" bindinput="oldInput" password="true" />
+      </view>
+      <view class="login-item-section">
+        <text>新密码：</text><input placeholder="请输入新密码" class="login-item-input" placeholder-style="color:#666666;" bindinput="newInput"  password="true"/>
+      </view>
+      <view class="login-item-section">
+        <text>确认密码：</text><input placeholder="请确认密码" class="login-item-input" placeholder-style="color:#666666;" bindinput="confirmInput"  password="true"/>
+      </view>
+      <view class="error-msg" wx:if="{{error}}">{{error}}</view>
+     <button class="login-button" bindtap="isChange" hover-class="hover"> 确认 </button>

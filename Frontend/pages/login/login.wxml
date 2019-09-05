@@ -1,0 +1,17 @@
+<view class="login">
+
+  <view class="login-item">
+      <image class="login-item-img" mode="scaleToFill" src="/images/login.jpg"></image>
+
+      <view class="login-item-section">
+        <input placeholder="请输入手机号" class="login-item-input" placeholder-style="color:#666666;" bindinput="userInput" />
+      </view>
+      <view class="login-item-section">
+        <input placeholder="请输入密码" class="login-item-input" placeholder-style="color:#666666;" bindinput="passwordInput"  password="true"/>
+      </view>
+        <button class="login-button" bindtap="isLogin" hover-class="hover" loading="{{loading}}"> 登录 </button>
+
+      <view class="error-msg" wx:if="{{error}}">{{error}}</view>
+  </view>
+
+</view>

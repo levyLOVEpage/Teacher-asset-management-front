@@ -1,0 +1,118 @@
+<view>
+  <swiper class="swiper-wrapper" autoplay="true" circular="true" indicator-dots="true" indicator-color="#fff" indicator-active-color="#FFA042">
+      <swiper-item class="swiper-item" wx:for="{{slides}}" wx:key="*this">
+        <image class="slider-image" src="{{item}}" mode="widthFix"></image>
+      </swiper-item>
+  </swiper>
+</view>
+<view class="goods_infor_top">
+  <view class="goods_title">
+    {{equdetail.ename}}（{{equdetail.enum}}）
+    <view class="goods_collect_btn" bindtap="collect">
+      <text>{{equdetail.etype}}</text>
+    </view>
+  </view>
+    <view class="divLine"></view>
+  <view class="goods_price">
+    <text>备注：{{equdetail.eremarks}}</text>
+  </view>
+  <view class="divLine"></view>
+  <view class="goods_deliver">
+    *本设备归属于{{equdetail.eunit}}
+  </view>
+</view>
+<view class="goods_infor_pre">
+  <view class="goods_infor_txt">
+    <view class="goods_infor_brand"></view>
+    <text>归属人：{{equdetail.euser}}
+    人员编号：{{equdetail.eusernum}}</text>
+  </view>
+</view>
+<view class="goods_infor_raw">
+  <view class="goods_infor_item">
+    <text>【规 格】</text>{{equdetail.especs}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【单 价】</text>{{equdetail.ecost}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【存 放 地】</text>{{equdetail.elocate}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【厂 家】</text>{{equdetail.ecompany}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【出 厂 号】</text>{{equdetail.efacnum}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【购置日期】</text>{{equdetail.epuchasedate}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【现 状】</text>{{equdetail.estatus}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【科 目】</text>{{equdetail.esbuject}}
+  </view>
+  <view class="goods_infor_item">
+    <text>【使用方向】</text>{{equdetail.eusedir}}
+  </view>
+    <view class="goods_infor_item">
+    <text>【设备来源】</text>{{equdetail.esource}}
+  </view>
+    <view class="goods_infor_item">
+    <text>【入库时间】</text>{{equdetail.estordate}}
+  </view>
+    <view class="goods_infor_item">
+    <text>【供 货 商】</text>{{equdetail.esupplier}}
+  </view>
+      <view class="goods_infor_item">
+    <text>【发 票 号】</text>{{equdetail.einvoicenum}}
+  </view>
+      <view class="goods_infor_item">
+    <text>【分 类 号】</text>{{equdetail.eclassnum}}
+  </view>
+      <view class="goods_infor_item">
+    <text>【采购形式】</text>{{equdetail.epromethod}}
+  </view>
+</view>
+<view class="goods_detail">
+  <view class="goods_detail_title"><view class="section__title" hidden='{{hiddentype}}'>借用日期</view>
+   <view class="divLine" hidden='{{hiddentype}}'></view>
+      <view class="flex-row flex-time" hidden='{{hiddentype}}'>
+            <picker  bindchange='beginChange'  class="pick-time time"mode="date" value="{{date}}" start="{{currenttime}}" end="2050-09-01" >
+                <text>
+                    开始时间：{{currenttime}}
+                </text>
+            </picker>  
+            <picker  bindchange='endChange' class="pick-time time" mode="date" value="{{date}}" start="{{currenttime}}" end="2050-09-01" >
+                <text>
+                    结束时间：{{endtime}}
+                </text>
+            </picker>  
+            <!-- <label class="time"><switch class="switch" checked bindchange="switch1Change" />默认</label> -->
+        </view>
+        <view class="flex-row" >        
+          <button class="btn btn-submit" hidden='{{hiddentype}}' bindtap='sub'>提交</button>
+       </view>
+       </view>
+  <view>
+  </view>
+</view>
+<view class="goods_bottom"></view>
+<view class="goods_bottom_btn">
+  <view>
+    <view class="goods_one">
+      <view class="goods_car_num">
+      </view>
+    </view>
+        <view class="goods_one">
+      <view class="goods_car_num">
+      </view>
+    </view>
+        <view class="goods_one">
+      <view class="goods_car_num">
+      </view>
+    </view>
+    <view class="goods_half_half blue" bindtap='borrow'>借用</view>
+  </view>
+</view>

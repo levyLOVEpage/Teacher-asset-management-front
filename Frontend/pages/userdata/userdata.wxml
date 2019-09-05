@@ -1,0 +1,36 @@
+<block wx:for="{{usermes}}" wx:key="item.student_number">
+<view class="list">
+    <view class="item" data-field="username">
+        姓名
+        <text class="text">{{item.name}}</text>
+    </view>
+    <view class="item" >
+        ID
+        <text class="text">{{item.student_number}}</text>
+    </view>
+    <view class="item">
+         性别
+        <text class="text">{{item.sex}}</text>
+    </view>
+    <view class="item" >
+        身份
+        <text class="text">{{item.identity}}</text>
+    </view>
+    <view class="item" >
+        邮箱
+        <text class="text">{{item.email}}</text>
+    </view>
+    <view class="item" >
+        手机号
+        <text class="text">{{item.celphone}}</text>
+    </view>
+    <view class="item" >
+        短号
+        <text class="text">{{item.phone_cornet}}</text>
+    </view>
+    <view class="item" >
+        固定号
+        <text class="text">{{item.landline}}</text>
+    </view>
+</view>
+</block>

@@ -1,0 +1,47 @@
+<view class="index" >
+  <view class="head">
+    <view class="title">
+    <view class="text" >
+        <view class="line_y"></view>
+        <text>设备信息</text>
+    </view> </view>
+    <view class="desc">服务电话：111111111</view>
+  </view>
+  <view class="body">
+    <view class="widgets">
+      <block wx:for-items="{{list}}" wx:key="item.id">  
+        <view class="widgets__item" >
+          <view id="{{item.id}}" class="widgets__info {{item.open ? 'widgets__info_show' : ''}}" bindtap="widgetsToggle" >
+            <text class="widgets__info-name">{{item.name}}</text>
+            <image class="widgets__info-img" src="/images/arrowright.png" mode="aspectFill" />
+          </view>
+          <view class="widgets__list {{item.open ? 'widgets__list_show' : ''}}">
+            <block wx:for="{{equlist}}" wx:key="{{index}}">
+              <navigator url="../first/first?id={{item.enum}}" class="widget" >
+              
+                <text class="widget__name">
+                <text>[{{index+1}}]{{item.ename}}</text>
+                {{enum}}: {{item.enum}}
+                {{etype}}: {{item.etype}}
+                </text>
+                <view class='unit'>{{item.eunit}}</view>
+                <image class="widget__arrow" src="/images/arrowright.png" mode="aspectFill" />
+                <view class="widget__line {{index == 0 ? 'widget__line_first' : ''}}"></view>
+              </navigator>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+<!-- <view class="data" >我的设备</view>
+<view wx:for="{{equlist}}">
+    {{eunit}}: {{item.eunit}}
+    {{enum}}: {{item.enum}}
+    {{ename}}: {{item.ename}}
+    {{etype}}: {{item.euser}}
+    
+</view> -->

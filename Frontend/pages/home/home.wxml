@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="con">
+  <!--轮播图-->
+  <swiper class="swiper-wrapper" autoplay="true" circular="true" indicator-dots="true" indicator-color="#fff" indicator-active-color="#FFA042">
+      <swiper-item class="swiper-item" wx:for="{{slides}}" wx:key="*this">
+        <image class="slider-image" src="{{item}}" mode="widthFix"></image>
+      </swiper-item>
+  </swiper>
+  <!--导航按钮-->
+  <view class="nav-btn-list">
+    <view class="btn-item" bindtap="click">
+      <image src="/images/homesao.png"></image>
+      <text>扫一扫</text>
+    </view>
+    <view class="btn-item" bindtap='equ'>
+      <image src="/images/homequ.png"></image>
+      <text>设备租借</text>
+    </view>
+    <view class="btn-item" bindtap='my'>
+      <image src="/images/homemy.png"></image>
+      <text>个人中心</text>
+    </view>
+    <view class="btn-item" bindtap='phone'>
+      <image src="/images/homephone.png"></image>
+      <text>联系人</text>
+    </view>
+  </view>
+  <view class="divLine"></view>
+  <view class="bargain-wrapper">
+    <view class="bargain-header">
+      <text>我的设备</text>
+      <image src="/images/right_arrow_circle.png" class="icon-right"></image>
+    </view>
+    <view class="bargain-item" wx:for="{{equlist}}"  bindtap="goDetail" wx:if="{{index<2}}">
+      <image class="bargain-img" src="/images/homeequ2.png"></image>
+      <view class="bargain-info">
+        <view class="info-header">
+          <text class="title">{{item.ename}}</text>
+          <text class="desc">{{item.eunit}}</text>
+        </view>
+        <view class="info-price">
+          <view class="base-price">
+          <text>仪器编号</text>
+            <text class="money">{{item.enum}}</text>
+          </view>
+          <view class="base-price">
+            <text>型号</text>
+            <text class="money">{{item.etype}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!--到底提示-->
+  <view class="bottom-tip" bindtap='equ2'>
+    <text>更多设备及详细信息-></text>
+  </view>
+</view>
